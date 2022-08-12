@@ -1,10 +1,12 @@
-
+import Footer from "./components/Footer"
+import MainContent from "./components/MainContent"
+import Navbar from "./components/Navbar"
 function App() {
   return (
     <div >
-      <header >
-        <h1>Hi Chucky</h1>
-      </header>
+      <Navbar />
+      <MainContent />
+      <Footer />
     </div>
   );
 }
