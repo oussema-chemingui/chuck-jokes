@@ -3,8 +3,10 @@ const MainContent = () => {
     return (
         <div>
             <div className='cover' >
-                    <p className='cover-title'>The Joke Bible</p>
-                    <p className='cover-description'>Daily Laughs for you and yours</p>
+                <div className='cover-text'>
+                <p className='cover-title'>The Joke Bible</p>
+                <p className='cover-description'>Daily Laughs for you and yours</p>
+                </div>
             </div>
             <div className='buttons-container'>
                 <button className='adult-button'>adult jokes</button>
@@ -16,20 +18,39 @@ const MainContent = () => {
                 <button className='puns-button'>puns</button>
                 <button className='all-button'>view all</button>
             </div>
-            <span className="badge">a joke</span>
-            <div className="cards">
-                <div className='card'>
-                    <header>
-                        <h2>A short heading</h2>
-                    </header>
-                    <div className="content">
-                        <p> The idea of reaching the North Pole by means of balloons appears to have been entertained many years ago. </p>
+            <span className="badge">Name Jokes</span>
+            <ul className="cards">
+                <li className="cards__item">
+                    <div className="card">
+                        <div className="card__content">
+                            <div className="card__title">Flex</div>
+                            <p className="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+                            <button className="btn btn--block card__btn">Button</button>
+                        </div>
                     </div>
+                </li>
+                <li className="cards__item">
+                    <div className="card">
+                        <div className="card__content">
+                            <div className="card__title">Flex</div>
+                            <p className="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+                            <button className="btn btn--block card__btn">Button</button>
+                        </div>
+                    </div>
+                </li>
+                <li className="cards__item">
+                    <div className="card">
+                        <div className="card__content">
+                            <div className="card__title">Flex</div>
+                            <p className="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+                            <button className="btn btn--block card__btn">Button</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>    
+                <div className='loadMore-button-container' >
+                    <button className='loadMore-button'>Load more</button>
                 </div>
-            </div>
-            <div>
-                <button>dzadadadaadaz</button>
-            </div>
         </div>
     )
 }

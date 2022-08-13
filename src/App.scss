@@ -1,3 +1,7 @@
+// @font-face {
+//     font-family: 'Montserrat';
+//     src: url(./assets/Montserrat/Montserrat-Black.ttf) 
+// }
 body {
     margin: 0;
 }
@@ -35,15 +39,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 .cover-title {
-    position: absolute;
-    left: 40%;
-    top: 10%;
     width: 350px;
     height: 72px;
-    margin: 0 174px 0 57px;
     font-family: var(--font-family);
     font-size: 48px;
     font-weight: normal;
@@ -52,15 +54,17 @@ body {
     line-height: 1.5;
     letter-spacing: normal;
     color: #cfb995;
+    margin-bottom: 10px;
+}
+.cover-text {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
 }
 
 .cover-description {
-    position: absolute;
-    top: 17%;
-    left: 39.5%;
     width: 350px;
     height: 72px;
-    margin: 0 174px 0 57px;
     font-family: var(--font-family);
     font-size: 24px;
     font-weight: normal;
@@ -76,10 +80,10 @@ body {
     justify-content: center;
     align-items: center;
     height: auto;
-    margin: 50px 100px 50px 100px;
+    margin: 50px 100px 25px 100px;
 }
 .adult-button {
-    width: 206px;
+    width: 240px;
     height: 42px;
     font-family: var(--font-family);
     font-size: 16px;
@@ -94,9 +98,10 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .dad-button {
-    width: 206px;
+    width: 240px;
     height: 42px;
     font-family: var(--font-family);
     font-size: 16px;
@@ -111,9 +116,10 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .christmas-button {
-    width: 206px;
+    width: 240px;
     height: 42px;
     font-family: var(--font-family);
     font-size: 16px;
@@ -128,9 +134,10 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .job-button {
-    width: 206px;
+    width: 240px;
     height: 42px;
     font-family: var(--font-family);
     font-size: 16px;
@@ -144,9 +151,10 @@ body {
     background-color: #ffdf5b;
     margin: 10px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .birthday-button {
-    width: 206px;
+    width: 240px;
     height: 42px;
     font-family: var(--font-family);
     font-size: 16px;
@@ -161,9 +169,10 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .sociale-button {
-    width: 206px;
+    width: 240px;
     height: 42px;
     font-family: var(--font-family);
     font-size: 16px;
@@ -178,9 +187,10 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .puns-button {
-    width: 206px;
+    width: 240px;
     height: 42px;
     font-family: var(--font-family);
     font-size: 16px;
@@ -195,9 +205,10 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .all-button {
-    width: 206px;
+    width: 240px;
     height: 42px;
     font-family: var(--font-family);
     font-size: 16px;
@@ -211,14 +222,105 @@ body {
     background-color: #ffffff;
     margin: 10px;
     text-transform: uppercase;
+    cursor: pointer;
 }
+.loadMore-button {
+    width: 240px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: black;
+    background-color: #ffffff;
+    margin: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.loadMore-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.badge {
+    background-color: #57e690;
+    border-radius: 50px;
+    padding: 5px 15px 5px 15px; 
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 100px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 50px 100px 25px 100px;
+    padding: 10px;
+    justify-content: space-around;
+  }
+  .cards__item {
+    display: flex;
+    padding: 1rem;
+    width:"33%"
+    // @media(min-width: 40rem) {
+    //   width: 50%;
+    // }
+    // @media(min-width: 56rem) {
+    //   width: 33.3333%;
+    // }
+  }  
+  .card {
+    width: 300px;
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    &:hover {
+      .card__image {
+        filter: contrast(100%);
+      }
+    }
+  }
+  .card__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .card__title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .card__text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
 
-.footer-img {
+.footer {
     width: 100%;
+    background-image: url(./assets/assets_Homework_Front-End_01/bitmap_2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
 }
 
-.footer-text {
-    position: absolute;
-    left: 10%;
-    top:100%;
-}
+// .footer-text {
+//     position: absolute;
+//     left: 10%;
+//     top:100%;
+// }
