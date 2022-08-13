@@ -1,5 +1,42 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
+import { getJokeByCategorie , getRandomJoke } from '../api/fetchApi' 
 const MainContent = () => {
+    const [ data , setData ] = useState([]);
+    const [ loading , setLoading ] = useState(false);
+    const [category , setCategory] = useState("random")
+    const handleFetchJokesByCategory = useCallback (async (categ) => {
+        setCategory(categ)
+        let jokes = []
+        setLoading(true)
+        for(let i = 0 ; i < 30 ; i++){
+            let joke = await getJokeByCategorie(categ)
+            jokes.push(joke.data)
+        }
+        setData(jokes)
+        setLoading(false)
+    },[])
+    const handleFetchRandomJokes = useCallback (async () => {
+        setCategory("random")
+        let jokes = []
+        setLoading(true)
+        for(let i = 0 ; i < 30 ; i++){
+            let joke = await getRandomJoke()
+            jokes.push(joke.data)
+        }
+        setData(jokes)
+        setLoading(false)
+    },[])
+    // useEffect(() => {
+    //     handleFetchJokes("animal")
+    // }, [handleFetchJokes])
+    
+
+    useEffect(() => {
+      console.log(data)
+      console.log(loading)
+    }, [data,loading])
+    
+    
     return (
         <div>
             <div className='cover' >
@@ -9,16 +46,16 @@ const MainContent = () => {
                 </div>
             </div>
             <div className='buttons-container'>
-                <button className='adult-button'>adult jokes</button>
-                <button className='dad-button'>dad jokes</button>
-                <button className='christmas-button'>christmas jokes</button>
-                <button className='job-button'>job jokes</button>
-                <button className='birthday-button'>birthday jokes</button>
-                <button className='sociale-button'>social jokes</button>
-                <button className='puns-button'>puns</button>
-                <button className='all-button'>view all</button>
+                <button onClick={() => handleFetchJokesByCategory("animal")} className='adult-button'>animal jokes</button>
+                <button onClick={() => handleFetchJokesByCategory("career")} className='dad-button'>career jokes</button>
+                <button onClick={() => handleFetchJokesByCategory("celebrity")} className='christmas-button'>celebrity jokes</button>
+                <button onClick={() => handleFetchJokesByCategory("dev")} className='job-button'>dev jokes</button>
+                <button onClick={() => handleFetchJokesByCategory("money")} className='birthday-button'>money jokes</button>
+                <button onClick={() => handleFetchJokesByCategory("music")} className='sociale-button'>music jokes</button>
+                <button onClick={() => handleFetchJokesByCategory("science")} className='puns-button'>science jokes</button>
+                <button onClick={() => handleFetchRandomJokes()} className='all-button'>view all</button>
             </div>
-            <span className="badge">Name Jokes</span>
+            <span className="badge">{category}{" Jokes"}</span>
             <ul className="cards">
                 <li className="cards__item">
                     <div className="card">

@@ -7,12 +7,6 @@ body {
 }
 
 :root {
-    --bg: #242526;
-    --bg-accent: #484a4d;
-    --text-color: #dadce1;
-    --nav-size: 60px;
-    --border: 1px solid #474a4d;
-    --border-radius: 8px;
     --font-family: Montserrat;
 }
 
@@ -98,7 +92,9 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .dad-button {
     width: 240px;
@@ -116,7 +112,9 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .christmas-button {
     width: 240px;
@@ -134,7 +132,9 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .job-button {
     width: 240px;
@@ -151,7 +151,9 @@ body {
     background-color: #ffdf5b;
     margin: 10px;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .birthday-button {
     width: 240px;
@@ -169,7 +171,9 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .sociale-button {
     width: 240px;
@@ -187,7 +191,9 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .puns-button {
     width: 240px;
@@ -205,7 +211,9 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .all-button {
     width: 240px;
@@ -222,7 +230,9 @@ body {
     background-color: #ffffff;
     margin: 10px;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .loadMore-button {
     width: 240px;
@@ -239,7 +249,9 @@ body {
     background-color: #ffffff;
     margin: 10px;
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .loadMore-button-container {
     display: flex;
