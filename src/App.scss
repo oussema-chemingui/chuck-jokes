@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+}
+
+:root {
+    --bg: #242526;
+    --bg-accent: #484a4d;
+    --text-color: #dadce1;
+    --nav-size: 60px;
+    --border: 1px solid #474a4d;
+    --border-radius: 8px;
+    --font-family: Montserrat;
+}
+
+.navbar {
+    height: var(--nav-size);
+    background-color: var(--bg);
+}
+
+.nav-items {
+    display: flex;
+    position: absolute;
+    left: 80%;
+}
+
+.nav-item {
+    align-items: center;
+    justify-content: center;
+}
+
+.cover {
+    width: 100%;
+    background-image: url(./assets/assets_Homework_Front-End_01/bitmap.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.cover-title {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    width: 350px;
+    height: 72px;
+    margin: 0 174px 0 57px;
+    font-family: var(--font-family);
+    font-size: 48px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #cfb995;
+}
+
+.cover-description {
+    position: absolute;
+    top: 17%;
+    left: 39.5%;
+    width: 350px;
+    height: 72px;
+    margin: 0 174px 0 57px;
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.buttons-container {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 50px 100px 50px 100px;
+}
+.adult-button {
+    width: 206px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff5b5b;
+    margin: 10px;
+    border: none;
+    text-transform: uppercase;
+}
+.dad-button {
+    width: 206px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #ff915b;
+    margin: 10px;
+    border: none;
+    text-transform: uppercase;
+}
+.christmas-button {
+    width: 206px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #ffbe5b;
+    margin: 10px;
+    border: none;
+    text-transform: uppercase;
+}
+.job-button {
+    width: 206px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: black;
+    background-color: #ffdf5b;
+    margin: 10px;
+    text-transform: uppercase;
+}
+.birthday-button {
+    width: 206px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #8fe360;
+    margin: 10px;
+    border: none;
+    text-transform: uppercase;
+}
+.sociale-button {
+    width: 206px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #57e690;
+    margin: 10px;
+    border: none;
+    text-transform: uppercase;
+}
+.puns-button {
+    width: 206px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #57dbe6;
+    margin: 10px;
+    border: none;
+    text-transform: uppercase;
+}
+.all-button {
+    width: 206px;
+    height: 42px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: black;
+    background-color: #ffffff;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.footer-img {
+    width: 100%;
+}
+
+.footer-text {
+    position: absolute;
+    left: 10%;
+    top:100%;
+}
