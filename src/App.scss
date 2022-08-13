@@ -263,10 +263,11 @@ body {
     border-radius: 50px;
     padding: 5px 15px 5px 15px; 
     font-family: var(--font-family);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #ffffff;
     margin-left: 100px;
+    text-transform: uppercase;
 }
 .cards {
     display: flex;
@@ -280,12 +281,6 @@ body {
     display: flex;
     padding: 1rem;
     width:"33%"
-    // @media(min-width: 40rem) {
-    //   width: 50%;
-    // }
-    // @media(min-width: 56rem) {
-    //   width: 33.3333%;
-    // }
   }  
   .card {
     width: 300px;
@@ -318,6 +313,7 @@ body {
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;
+    font-family: var(--font-family);
   }
 
 .footer {
@@ -330,6 +326,12 @@ body {
     display: flex;
     justify-content: center;
 }
+// .card__btn-container {
+//     width: 100%;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+// }
 
 // .footer-text {
 //     position: absolute;

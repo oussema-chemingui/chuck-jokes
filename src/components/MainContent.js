@@ -4,6 +4,7 @@ const MainContent = () => {
     const [ data , setData ] = useState([]);
     const [ loading , setLoading ] = useState(false);
     const [category , setCategory] = useState("random")
+    // const [dataToShow , setDataToShow] = useState([])
     const handleFetchJokesByCategory = useCallback (async (categ) => {
         setCategory(categ)
         let jokes = []
@@ -26,9 +27,9 @@ const MainContent = () => {
         setData(jokes)
         setLoading(false)
     },[])
-    // useEffect(() => {
-    //     handleFetchJokes("animal")
-    // }, [handleFetchJokes])
+    useEffect(() => {
+        handleFetchRandomJokes()
+    }, [handleFetchRandomJokes])
     
 
     useEffect(() => {
@@ -53,37 +54,23 @@ const MainContent = () => {
                 <button onClick={() => handleFetchJokesByCategory("money")} className='birthday-button'>money jokes</button>
                 <button onClick={() => handleFetchJokesByCategory("music")} className='sociale-button'>music jokes</button>
                 <button onClick={() => handleFetchJokesByCategory("science")} className='puns-button'>science jokes</button>
-                <button onClick={() => handleFetchRandomJokes()} className='all-button'>view all</button>
+                <button onClick={() => handleFetchRandomJokes()} className='all-button'>view all</button> 
             </div>
             <span className="badge">{category}{" Jokes"}</span>
             <ul className="cards">
+                {data.map((joke) => (
                 <li className="cards__item">
-                    <div className="card">
-                        <div className="card__content">
-                            <div className="card__title">Flex</div>
-                            <p className="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-                            <button className="btn btn--block card__btn">Button</button>
+                <div className="card">
+                    <div className="card__content">
+                        <div className="card__title">{ joke.categories[0]}</div>
+                        <p className="card__text">{joke.value}</p>
+                        <div className="card__btn-container">
+                        <a href={joke.url} >See stats</a>
                         </div>
                     </div>
-                </li>
-                <li className="cards__item">
-                    <div className="card">
-                        <div className="card__content">
-                            <div className="card__title">Flex</div>
-                            <p className="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-                            <button className="btn btn--block card__btn">Button</button>
-                        </div>
-                    </div>
-                </li>
-                <li className="cards__item">
-                    <div className="card">
-                        <div className="card__content">
-                            <div className="card__title">Flex</div>
-                            <p className="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-                            <button className="btn btn--block card__btn">Button</button>
-                        </div>
-                    </div>
-                </li>
+                </div>
+            </li>
+                ))}
             </ul>    
                 <div className='loadMore-button-container' >
                     <button className='loadMore-button'>Load more</button>
