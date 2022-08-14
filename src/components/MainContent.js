@@ -47,6 +47,7 @@ const MainContent = () => {
                 <p className='cover-description'>Daily Laughs for you and yours</p>
                 </div>
             </div>
+            <div className='main-container' >
             <div className='buttons-container'>
                 <button onClick={() => handleFetchJokesByCategory("animal")} className='adult-button'>animal jokes</button>
                 <button onClick={() => handleFetchJokesByCategory("career")} className='dad-button'>career jokes</button>
@@ -70,7 +71,7 @@ const MainContent = () => {
                     <div className="card__title">{ joke.categories[0] ? joke.categories[0] + " Joke" : "Random Joke"}</div>
                     <p className="card__text">{joke.value}</p>
                     <div className="card__btn-container">
-                    <a href={joke.url} >See stats</a>
+                    <a className='see-stats-button' href={joke.url} >See stats</a>
                     </div>
                 </div>
             </div>
@@ -80,6 +81,7 @@ const MainContent = () => {
         }
                 <div className='loadMore-button-container' >
                     <button className='loadMore-button'>Load more</button>
+                </div>
                 </div>
         </div>
     )
