@@ -60,7 +60,7 @@ const MainContent = () => {
             <span className="badge">{category}{" Jokes"}</span>
             {loading ? 
             <div className='loader'> 
-                <img src={norrisLoader} alt="loader" ></img>     
+                <img src={norrisLoader} alt="loader" ></img>
             </div> :
             <ul className="cards">
             {data.map((joke) => (
