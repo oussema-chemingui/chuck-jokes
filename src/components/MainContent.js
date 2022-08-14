@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { getJokeByCategorie , getRandomJoke } from '../api/fetchApi' 
+import norrisLoader from '../assets/assets_Homework_Front-End_01/Norris_Stand.webp'
 const MainContent = () => {
     const [ data , setData ] = useState([]);
     const [ loading , setLoading ] = useState(false);
@@ -57,21 +58,26 @@ const MainContent = () => {
                 <button onClick={() => handleFetchRandomJokes()} className='all-button'>view all</button> 
             </div>
             <span className="badge">{category}{" Jokes"}</span>
+            {loading ? 
+            <div className='loader'> 
+                <img src={norrisLoader} alt="loader" ></img>     
+            </div> :
             <ul className="cards">
-                {data.map((joke) => (
-                <li className="cards__item">
-                <div className="card">
-                    <div className="card__content">
-                        <div className="card__title">{ joke.categories[0]}</div>
-                        <p className="card__text">{joke.value}</p>
-                        <div className="card__btn-container">
-                        <a href={joke.url} >See stats</a>
-                        </div>
+            {data.map((joke) => (
+            <li className="cards__item">
+            <div className="card">
+                <div className="card__content">
+                    <div className="card__title">{ joke.categories[0] ? joke.categories[0] + " Joke" : "Random Joke"}</div>
+                    <p className="card__text">{joke.value}</p>
+                    <div className="card__btn-container">
+                    <a href={joke.url} >See stats</a>
                     </div>
                 </div>
-            </li>
-                ))}
-            </ul>    
+            </div>
+        </li>
+            ))}
+        </ul>  
+        }
                 <div className='loadMore-button-container' >
                     <button className='loadMore-button'>Load more</button>
                 </div>
