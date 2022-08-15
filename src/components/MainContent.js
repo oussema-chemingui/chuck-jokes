@@ -1,11 +1,35 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { getJokeByCategorie, getRandomJoke } from '../api/fetchApi'
 import norrisLoader from '../assets/assets_Homework_Front-End_01/Norris_Stand.webp'
+import cardIcon from '../assets/assets_Homework_Front-End_01/green-light-copy-2@2x.png'
+const SearchBar = ({ searchData }) => {
+    return (
+        <div className='searchBar-container'>
+            <input className='searchBar' onChange={searchData} type="text" placeholder="Search Joke" />
+        </div>
+    )
+}
+const SearchResult = ({ queryData }) => {
+    return (
+      <div className='search-query-container'>
+        <ul className='search-query' >
+          {queryData?.map((joke) => (
+            <li>
+              {joke.value ? joke.value?.substring(0, 20) : null}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
 const MainContent = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [category, setCategory] = useState("random")
     const [loadMore, setLoadMore] = useState(6)
+    const [queryData, setQueryData] = useState([])
+    // const [searchValue, setSearchValue] = useState("")
     const handleFetchJokesByCategory = useCallback(async (categ) => {
         setCategory(categ)
         let jokes = []
@@ -28,7 +52,6 @@ const MainContent = () => {
         }
         setData(jokes)
         setLoadMore(6)
-        // setDataToRender(jokes.slice(0,6))
         setLoading(false)
     }, [])
     const handleLoadMore = () => {
@@ -39,10 +62,29 @@ const MainContent = () => {
     }, [handleFetchRandomJokes])
 
     useEffect(() => {
-        console.log(loadMore)
+        // console.log(searchValue)
+        console.log(queryData)
+        console.log(data)
+    }, [queryData, data])
 
-    }, [loadMore])
+    const searchData = (e) => {
+        var queryData = [];
+        // setSearchValue(e.target.value);
+        if (e.target.value !== '') {
+            data.forEach((joke, index) => {
+                if (joke.value.toLowerCase().indexOf(e.target.value) !== -1) {
+                    if (queryData.length < 10) {
+                        queryData.push({ joke, index });
+                    }
+                }
+            });
+        }
+        setQueryData(queryData);
+    }
 
+    //   const handleSearchValue = (e) => {
+    //     e.preventDefault();
+    //   };
 
     return (
         <div>
@@ -50,6 +92,8 @@ const MainContent = () => {
                 <div className='cover-text'>
                     <p className='cover-title'>The Joke Bible</p>
                     <p className='cover-description'>Daily Laughs for you and yours</p>
+                    <SearchBar searchData={searchData} />
+                    <SearchResult queryData={queryData} />
                 </div>
             </div>
             <div className='main-container' >
@@ -69,25 +113,30 @@ const MainContent = () => {
                         <img src={norrisLoader} alt="loader" ></img>
                     </div> :
                     <>
-                    <ul className="cards">
-                        {data.slice(0,loadMore).map((joke) => (
-                            <li className="cards__item">
-                                <div className="card">
-                                    <div className="card__content">
-                                        <div className="card__title">{joke.categories[0] ? joke.categories[0] + " Joke" : "Random Joke"}</div>
-                                        <p className="card__text">{joke.value}</p>
-                                        <div className="card__btn-container">
-                                            <a className='see-stats-button' href={joke.url} >See stats</a>
+                        <ul className="cards">
+                            {data.slice(0, loadMore).map((joke) => (
+                                <li className="cards__item">
+                                    <div className="card">
+                                        <div className="card__content">
+                                            <div className='card__title' >
+                                            <img src={cardIcon} alt="cardIcon" ></img>
+                                            <div className="card__title">
+                                                {joke.categories[0] ? joke.categories[0] + " Joke" : "Random Joke"}
+                                            </div>
+                                            </div>
+                                            <p className="card__text">{joke.value}</p>
+                                            <div className="card__btn-container">
+                                                <a className='see-stats-button' href={joke.url} >See stats</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                <div onClick={() => handleLoadMore()} className='loadMore-button-container' >
-                    <button className='loadMore-button'>Load more</button>
-                </div>
-                </>
+                                </li>
+                            ))}
+                        </ul>
+                        <div onClick={() => handleLoadMore()} className='loadMore-button-container' >
+                            <button className='loadMore-button'>Load more</button>
+                        </div>
+                    </>
                 }
             </div>
         </div>

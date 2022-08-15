@@ -2,54 +2,67 @@
     font-family: 'Montserrat-Black';
     src: url(./assets/Montserrat/Montserrat-Black.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-BlackItalic';
     src: url(./assets/Montserrat/Montserrat-BlackItalic.ttf)
 }
+
 @font-face {
     font-family: 'Montserrat-Bold';
     src: url(./assets/Montserrat/Montserrat-Bold.ttf)
 }
+
 @font-face {
     font-family: 'Montserrat-Bold-Italic';
     src: url(./assets/Montserrat/Montserrat-BoldItalic.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Extra-Light';
     src: url(./assets/Montserrat/Montserrat-ExtraLight.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Extra-Light-Italic';
     src: url(./assets/Montserrat/Montserrat-ExtraLightItalic.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Italic';
     src: url(./assets/Montserrat/Montserrat-Italic.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Light';
     src: url(./assets/Montserrat/Montserrat-Light.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Light-Italic';
     src: url(./assets/Montserrat/Montserrat-LightItalic.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Medium';
     src: url(./assets/Montserrat/Montserrat-Medium.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-SemiBold';
     src: url(./assets/Montserrat/Montserrat-SemiBold.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Thin';
     src: url(./assets/Montserrat/Montserrat-Thin.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Semi-Bold-Italic';
     src: url(./assets/Montserrat/Montserrat-SemiBoldItalic.ttf),
 }
+
 @font-face {
     font-family: 'Montserrat-Thin-Italic';
     src: url(./assets/Montserrat/Montserrat-ThinItalic.ttf)
@@ -60,20 +73,20 @@ body {
 }
 
 :root {
-        --font-family-Black: 'Montserrat-Black';
-        --font-family-BlackItalic: 'Montserrat-BlackItalic';
-        --font-family-Montserrat-Bold: 'Montserrat-Bold';
-        --font-family-Bold-Italic: 'Montserrat-Bold-Italic';
-        --font-family-Extra-Light: 'Montserrat-Extra-Light';
-        --font-family-Extra-Light-Italic: 'Montserrat-Extra-Light-Italic';
-        --font-family-Italic: 'Montserrat-Italic';
-        --font-family-Light: 'Montserrat-Light';
-        --font-family-Light-Italic: 'Montserrat-Light-Italic';
-        --font-family-Medium: 'Montserrat-Medium';
-        --font-family-SemiBold: 'Montserrat-SemiBold';
-        --font-family-Thin: 'Montserrat-Thin';
-        --font-family-Semi-Bold-Italic: 'Montserrat-Semi-Bold-Italic';
-        --font-family-Thin-Italic: 'Montserrat-Thin-Italic';
+    --font-family-Black: 'Montserrat-Black';
+    --font-family-BlackItalic: 'Montserrat-BlackItalic';
+    --font-family-Montserrat-Bold: 'Montserrat-Bold';
+    --font-family-Bold-Italic: 'Montserrat-Bold-Italic';
+    --font-family-Extra-Light: 'Montserrat-Extra-Light';
+    --font-family-Extra-Light-Italic: 'Montserrat-Extra-Light-Italic';
+    --font-family-Italic: 'Montserrat-Italic';
+    --font-family-Light: 'Montserrat-Light';
+    --font-family-Light-Italic: 'Montserrat-Light-Italic';
+    --font-family-Medium: 'Montserrat-Medium';
+    --font-family-SemiBold: 'Montserrat-SemiBold';
+    --font-family-Thin: 'Montserrat-Thin';
+    --font-family-Semi-Bold-Italic: 'Montserrat-Semi-Bold-Italic';
+    --font-family-Thin-Italic: 'Montserrat-Thin-Italic';
 }
 
 .navbar {
@@ -102,6 +115,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .main-container {
     margin: 50px 100px 25px 100px;
 }
@@ -119,6 +133,7 @@ body {
     color: #cfb995;
     margin-bottom: 10px;
 }
+
 .cover-text {
     display: flexbox;
     justify-content: center;
@@ -127,7 +142,7 @@ body {
 
 .cover-description {
     width: 350px;
-    height: 72px;
+    height: 50px;
     font-family: var(--font-family-Light);
     font-size: 22px;
     font-weight: normal;
@@ -138,13 +153,16 @@ body {
     color: #ffffff;
     margin-top: 10px;
 }
+
 .buttons-container {
     display: flexbox;
     justify-content: center;
     align-items: center;
     height: auto;
     margin: 50px 100px 25px 100px;
+    z-index: 1;
 }
+
 .adult-button {
     width: 240px;
     height: 42px;
@@ -161,10 +179,12 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .dad-button {
     width: 240px;
     height: 42px;
@@ -181,10 +201,12 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .christmas-button {
     width: 240px;
     height: 42px;
@@ -201,10 +223,12 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .job-button {
     width: 240px;
     height: 42px;
@@ -220,10 +244,12 @@ body {
     background-color: #ffdf5b;
     margin: 10px;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .birthday-button {
     width: 240px;
     height: 42px;
@@ -240,10 +266,12 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .sociale-button {
     width: 240px;
     height: 42px;
@@ -260,10 +288,12 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .puns-button {
     width: 240px;
     height: 42px;
@@ -280,10 +310,12 @@ body {
     margin: 10px;
     border: none;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .all-button {
     width: 240px;
     height: 42px;
@@ -299,10 +331,12 @@ body {
     background-color: #ffffff;
     margin: 10px;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .loadMore-button {
     width: 240px;
     height: 42px;
@@ -318,19 +352,22 @@ body {
     background-color: #ffffff;
     margin: 10px;
     text-transform: uppercase;
+
     &:hover {
         cursor: pointer;
     }
 }
+
 .loadMore-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .badge {
     background-color: #57e690;
     border-radius: 50px;
-    padding: 5px 15px 5px 15px; 
+    padding: 5px 15px 5px 15px;
     font-family: var(--font-family-Light);
     font-size: 14px;
     font-weight: 600;
@@ -338,38 +375,44 @@ body {
     margin-left: 100px;
     text-transform: uppercase;
 }
+
 .loader {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .cards {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-around;
-  }
-  .cards__item {
+}
+
+.cards__item {
     display: flex;
     padding: 1rem;
-    margin : 10px
-  }  
-  .card {
+    margin: 10px
+}
+
+.card {
     width: 450px;
     height: 228px;
     background-color: white;
     border-radius: 0.25rem;
-    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
     &:hover {
-      .card__image {
-        filter: contrast(100%);
-      }
+        .card__image {
+            filter: contrast(100%);
+        }
     }
-  }
-  .card__content {
+}
+
+.card__content {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -377,23 +420,25 @@ body {
     font-size: 16px;
     margin-left: 16px;
     margin-right: 16px;
-  }
-  .card__title {
+}
+
+.card__title {
     font-family: var(--font-family-Montserrat-Bold);
     display: flex;
     height: 42px;
     font-weight: 300;
-    margin-left: 32px;
+    margin-left: 10px;
     text-transform: uppercase;
     align-items: center;
-  }
-  .card__text {
+}
+
+.card__text {
     flex: 1 1 auto;
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;
     font-family: var(--font-family-Medium);
-  }
+}
 
 .footer {
     width: 100%;
@@ -405,16 +450,47 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .card__btn-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
 }
+
 a {
     color: #8fe360;
     font-family: var(--font-family-SemiBold);
 }
+
+.searchBar {
+    width: 350px;
+    border-radius: 5px;
+    height: 20px;
+    background-color: transparent;
+    border-color: white;
+    padding: 1rem;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.search-query-container {
+    background-color: white;
+    z-index: 2;
+}
+
+.search-query {
+    color: black;
+}
+.card-title-container {
+    display: flex;
+}
+
+// @function invert($transparent, $white: 100%) {
+//     $inverse: change-transparent($transparent, $hue: hue($transparent) + 180);
+//     @return mix($inverse, $transparent, $white);
+//   }
 
 // .footer-text {
 //     position: absolute;
